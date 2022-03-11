@@ -1,0 +1,17 @@
+Topic: Basic commands
+
+Directories:
+# cd [directory] moves you within directories. You can reach $HOME directory with cd, cd ~,
+cd $HOME. With cd .. you can move above current directory.
+# ls to view the contents of a directory. Ls -al will list all files (including hidden) and give a
+long listing.
+# pwd to print current working directory.
+# mkdir and rmdir to make and remove directories.
+
+Files:
+# touch to create an empty file, it also sets time for the file.
+# cat to print contents of file to standard output.
+# cd [options] <file> <destination file> to copy files to other filenames or copy to a different
+directory.
+# mv [options] <file> <to dir> to move files within directories or rename files.
+# rm to remove files

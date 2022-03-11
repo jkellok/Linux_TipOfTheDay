@@ -1,0 +1,17 @@
+Topic: Less
+
+Less is a pager program. Linux has a pager command more but less has more search and
+move capabilities.
+
+Most commonly used commands:
+# h = help
+# q = quit
+# /RE = search regular expression forward and use “n” to repeat search and “N” to repeat to
+other direction.
+# SPC = next page, b = back page
+# d = down half window, u = up half window
+# < = beginning of file, > = end of file
+# m L = mark position with LETTER, ‘ L = jump to position LETTER
+# :NNN = go to line number NNN
+# :n = next file, :p = previous file
+# -I = ignore case, -n = line numbers on/off

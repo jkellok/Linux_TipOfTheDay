@@ -1,0 +1,13 @@
+Topic: Linux operating system
+
+Linux is a family of open-source Unix-like operating system based on Linux kernel. Kernel
+handles system’s resources and devices.
+
+Main objective of Unix was to create an environment that is consistent across different
+hardware configurations -> portable operating system. OS is insulated from special features
+of hardware to minimize porting requirements -> Linux assumes the hardware is very simple
+-> computer consists of process and data.
+
+There are multiple Linux distributions, which include the Linux kernel and system software
+and libraries, for example Debian, Ubuntu and Red Hat. They have different major server
+release cycles.
