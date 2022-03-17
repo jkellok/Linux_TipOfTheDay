@@ -1,0 +1,9 @@
+Topic: Globbing
+You can use file globbing to match patterns in files and you can handle those files at the
+same time.
+Globbing meta characters:
+# [] range of accepted characters like [0-9] [a-z], A bracket matches only one character. You
+can write numbers 10-29 as [12][0-9]
+# [!] excluded characters, [!5] would match any character that is not 5
+# ? single character that is required, you could search for three letter extensions like file.???
+# * any number of characters (zero or more), file*, it can expand to huge number of files

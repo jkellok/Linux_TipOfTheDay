@@ -1,0 +1,9 @@
+Topic: Command processor
+The command processor is called a shell. There are different types of shells, like Bourne
+Shell sh, ash, GNU bash, ksh, zsh, csh, tcsh. You can find out what shells are available in
+your system by looking into your bin directories: $ ls -l /bin /usr/bin /usr/local/bin | grep ‘sh$’.
+The terminal is actually a file in the system and you can use command tty to see which file
+the terminal is connected to.
+The command processor acts as the interface between a command. It prompts the user for a
+command, reads the input, interprets the command line and creates a process to execute
+the command that the operating system then runs.

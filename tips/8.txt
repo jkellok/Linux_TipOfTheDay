@@ -1,0 +1,15 @@
+Topic: Package management
+Packages are retrieved from worldwide Debian repository network. You can download
+packages for your needs.
+Basic commands are apt-get, which is higher level, and dpkg, which is low level. There are
+also graphical ones like aptitude and synaptic. You can automate apt-get commands into
+scripts and run them by cron.
+Steps: Install new package with apt-get install <package>, update database with apt-get
+update to see If there are new versions of packages available and then upgrade installed
+packages with apt-get upgrade or upgrade specific program with the package name. To
+remove package, use apt-get remove <package> (removes binaries) or apt-get purge
+<package> (removes also configuration files). You can clean your system with apt-get clean
+(clear locally saved retrieved packages), apt-get autoclean (removes only old version cache)
+or apt-get autoremove (removes packages that had dependencies but not anymore).
+Apt-get dist-upgrade looks for dependencies with newer version of a package and might
+install new packages or remove existing ones while apt-get upgrade will not do that.

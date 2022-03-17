@@ -1,0 +1,15 @@
+Topic: File archiving
+# traditional: compress, uncompress, other programs have better compression
+# GNU gzip and bzip2, for individual files
+## gzip can adjust compression rate 1-9, gzip -9 <file> and gzip –best <file> is the same
+## bzip2 is more effective and uses similar options as gzip, like bzip2 –best <file>
+# tar: tape archive, multiple files are compressed into a single package -> can’t extract single
+files without decompressing the package first -> compresses better than zip
+## tar -cvf archive.tar tmp/ = -c creates the archive file, -v prints verbose information, -f
+specifies filename (you have to specify extension), directory tmp is compressed into
+archive.tar
+## -t to view contents of an archive file without extracting, -x to extract, use -C to extract the
+file to a different directory, eg. tar -xvf archive.tar -C /tmp/files
+# zip: every file is individually compressed, zip and unzip are separate programs
+# handling compressed files, zcmp to compare files, zcat to print compressed file, zdiff to
+compare with diff, zgrep to search with regular expressions

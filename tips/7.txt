@@ -1,0 +1,12 @@
+Topic: Bash configuration files
+# /etc/profile = global profile file, system wide settings, executed when shell starts up.
+Commands in the profile customize accounts for terminals and set environment variables
+(stty, umask, PATH, TZ time zone, LC_ALL language locale, message of day)
+# ~/.bash_{profile,login} or ~/.profile = shell reads personal profile file after global one
+# $HOME/.bash_profile = Bash only, at user log in, if file doesn’t exist, reads ~/.profile
+instead, changes will only take effect when user logs out and in again
+# $HOME/.bashrc = Bash only, contents are executed when a new subshell is started, alias
+and user function definitions, changes will take effect when the file is re-read into the current
+environment with . ~/.bashrc
+# $HOME/.bash_logout = Bash only, executed when user log outs, usually does not exist but
+can be used to delete temporary files and write log out information

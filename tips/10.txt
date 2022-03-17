@@ -1,0 +1,15 @@
+Topic: Sed command
+Sed is a stream editor, which manipulates data with given rules.
+Syntax: sed [OPTIONS] [-e] ‘INSTRUCTION’ [-e ‘INSTRUCTION’ ...] file ...
+Most used options are -f FILE to read commands from (*.sed) file, -e “SED-EXPRESSION”
+which you can use multiple times and -n to not print lines unless command p is used.
+INSTRUCTION choices can be in SEARCH/INSTRUCTION/ format. SEARCH can be a
+regular expression /REGEXP/ or an ADDRESS notation FROM_ADDRESS [,
+TO_ADDRESS]. INSTRUCTION is what to do, it can be p = print, d = delete and s =
+substitute.
+# /RE/,/RE/p = print lines between regular expressions, 2p = print line 2
+# [address]s/RE/replacement/[flag] -> 10,20s/CA/California/g = substitute in lines 10-20
+# sed -e ‘/[0-9]/d’ ... = delete all lines with numbers, can also use sed -d ‘/RE/’
+Sed also has a memory to store matched text. Syntax is \(RE\). You can use 9 memory
+positions and the positions start from 1. You can extract memory positions. Example: sed -e
+‘s/\([a-zA-Z]*\) \[a-zA-Z]*\)/\2, \1/’ switches text order.

@@ -1,0 +1,11 @@
+Topic: Awk programming
+Syntax: awk ‘{ CODE }’ [var=”value” ..] file ...
+Awk is a mini-programming language. You can write the program inside quotes. Each word
+becomes a variable $N, where N is the number, for example $1 is the first word. $0 is the
+whole line. NF is number of fields in the line and $(NF) refers to the last word in the line. The
+main() program is enclosed in the braces {}. There can be several main programs, they are
+run in order. Words BEGIN and END are special. BEGIN is executed at the start-up only
+once and it is optional. END executes at the end of the program and is optional to use.
+You can also write your program in a file. In order to use your program you have to make it
+executable with a command chmod +x <file>.awk and then you could run the program in the
+current directory, for example ls -l | ./<file>.awk.
