@@ -2,6 +2,13 @@
 
 # Tool to display totd
 
+# Check no interactive shell, exit
+tty -s || exit
+# If user has file .nototd, exit
+if [ -e ~.nototd ]; then
+	exit;
+fi
+
 # Directory of this script
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 #echo "$SCRIPT_DIR"
