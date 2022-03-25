@@ -20,7 +20,7 @@ NUMTIP=$(ls "$SCRIPT_DIR"/tips/*.txt | wc -l)
 echo "Number of tips: $NUMTIP"
 
 # Read the current tip number from curtip file
-NUM=$(<.curtip)
+NUM=$(<"$SCRIPT_DIR"/.curtip)
 
 # Check that current tip is in range and increment by one
 NUM=$(expr $NUM % $NUMTIP)
@@ -37,7 +37,7 @@ echo ""
 #NUM=$(expr $NUM + 1)
 
 # Store the value to curtip file
-echo $NUM > .curtip
+echo $NUM > "$SCRIPT_DIR"/.curtip
 
 # Prompt for more tips
 read -p "Show next tip? (j) " -n 1 -r answer
