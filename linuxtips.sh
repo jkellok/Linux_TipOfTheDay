@@ -12,6 +12,7 @@ fi
 # Directory of this script
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 #echo "$SCRIPT_DIR"
+echo "Tip of the day - totd"
 
 tip(){
 # Count number of tips in folder where script is
