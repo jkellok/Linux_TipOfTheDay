@@ -5,8 +5,8 @@
 # Check no interactive shell, exit
 tty -s || exit
 # If user has file .nototd, exit
-if [ -e ~.nototd ]; then
-	exit;
+if [ -e ~/.nototd ]; then
+	return 0
 fi
 
 # Directory of this script
