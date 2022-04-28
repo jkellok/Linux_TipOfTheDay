@@ -17,7 +17,8 @@ fi
 
 # Directory of this script
 SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
-#echo "$SCRIPT_DIR"
+echo "Script directory: "$SCRIPT_DIR""
+echo "Tips directory: "$TIPS_REPO""
 echo "Tip of the day - totd"
 
 tip(){
