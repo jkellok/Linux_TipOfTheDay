@@ -5,8 +5,14 @@
 # Check no interactive shell, exit
 tty -s || exit
 # If user has file .nototd, exit
-if [ -e ~/.nototd ]; then
+if [ -e "$HOME"/.nototd ]; then
 	return 0
+fi
+echo "To disable, create file "$HOME"/.nototd"
+
+if [ ! "$TIPS_REPO" ]; then
+	# Default value:
+	TIPS_REPO=/nfs/tips
 fi
 
 # Directory of this script
@@ -16,7 +22,8 @@ echo "Tip of the day - totd"
 
 tip(){
 # Count number of tips in folder where script is
-NUMTIP=$(ls "$SCRIPT_DIR"/tips/*.txt | wc -l)
+#NUMTIP=$(ls "$SCRIPT_DIR"/tips/*.txt | wc -l)
+NUMTIP=$(ls "$TIPS_REPO"/*.txt | wc -l)
 echo "Number of tips: $NUMTIP"
 
 # Read the current tip number from curtip file
@@ -29,7 +36,8 @@ echo Current: $NUM
 echo ""
 
 # Print out the content of the tip file
-cat "$SCRIPT_DIR"/tips/$NUM.txt
+#cat "$SCRIPT_DIR"/tips/$NUM.txt
+cat "$TIPS_REPO"/$NUM.txt
 echo ""
 
 # Increment by one
